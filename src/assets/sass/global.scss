@@ -1,0 +1,148 @@
+@import 'variables.scss';
+@import 'grid.scss';
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: bold;
+  src: url('/assets/fonts/IRANYekan/eot/iranyekanwebbold.eot');
+  src: url('/assets/fonts/IRANYekan/eot/iranyekanwebbold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+  url('/assets/fonts/IRANYekan/woff2/iranyekanwebbold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+  url('/assets/fonts/IRANYekan/woff/iranyekanwebbold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('/assets/fonts/IRANYekan/ttf/iranyekanwebbold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 300;
+  src: url('/assets/fonts/IRANYekan/eot/iranyekanweblight.eot');
+  src: url('/assets/fonts/IRANYekan/eot/iranyekanweblight.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+  url('/assets/fonts/IRANYekan/woff2/iranyekanweblight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+  url('/assets/fonts/IRANYekan/woff/iranyekanweblight.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('/assets/fonts/IRANYekan/ttf/iranyekanweblight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/IRANYekan/eot/iranyekanwebregular.eot');
+  src: url('/assets/fonts/IRANYekan/eot/iranyekanwebregular.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+  url('/assets/fonts/IRANYekan/woff2/iranyekanwebregular.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+  url('/assets/fonts/IRANYekan/woff/iranyekanwebregular.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('/assets/fonts/IRANYekan/ttf/iranyekanwebregular.ttf') format('truetype');
+}
+
+
+
+/* Latin fonts (Roboto) */
+
+@font-face {
+  font-family: roboto;
+  font-style: normal;
+  font-weight: bold;
+  src: url('/assets/fonts/IRANYekan/eot/robotobold.eot');
+  src: url('/assets/fonts/IRANYekan/eot/robotobold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+  url('/assets/fonts/IRANYekan/woff2/robotobold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+  url('/assets/fonts/IRANYekan/woff/robotobold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('/assets/fonts/IRANYekan/ttf/robotobold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: roboto;
+  font-style: normal;
+  font-weight: 300;
+  src: url('/assets/fonts/IRANYekan/eot/robotolight.eot');
+  src: url('/assets/fonts/IRANYekan/eot/robotolight.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+  url('/assets/fonts/IRANYekan/woff2/robotolight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+  url('/assets/fonts/IRANYekan/woff/robotolight.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('/assets/fonts/IRANYekan/ttf/robotolight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: roboto;
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/IRANYekan/eot/robotoregular.eot');
+  src: url('/assets/fonts/IRANYekan/eot/robotoregular.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+  url('/assets/fonts/IRANYekan/woff2/robotoregular.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+  url('/assets/fonts/IRANYekan/woff/robotoregular.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('/assets/fonts/IRANYekan/ttf/robotoregular.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 100%;
+  font-family: iranyekan,roboto, sans-serif;
+  direction: rtl;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@include tablet-s(){
+  body{
+    font-size: 85%;
+  }
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+
+*:focus,
+input:focus,
+button:focus,
+textarea:focus {
+  outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #ffffff inset;
+
+}
+
+input, textarea {
+  font-family: iranyekan,roboto, sans-serif;
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $placeholder-color;
+    letter-spacing: normal!important;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $placeholder-color;
+    letter-spacing: normal!important;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $placeholder-color;
+    letter-spacing: normal!important;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $placeholder-color;
+    letter-spacing: normal!important;
+  }
+}
+
+

@@ -1,0 +1,97 @@
+$columnNumber: 20;
+$secondaryColumnNumber: 3;
+
+@mixin columnWidthGenerator($ind, $num) {
+  width: 1% * $ind*(100/$num);
+  min-width: 1% * $ind*(100/$num);
+}
+
+@mixin rowHeightGenerator($ind, $num) {
+  height: 1% * $ind*(100/$num);
+  min-height: 1% * $ind*(100/$num);
+}
+
+//wi-4k
+@mixin fourK {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+//wi-xxl
+@mixin laptop-l {
+  @media screen and (max-width: 1439px) {
+    @content;
+  }
+}
+
+//wi-xl
+@mixin laptop {
+  @media screen and (max-width: 1364px) {
+    @content;
+  }
+}
+
+//wi-l
+@mixin tablet {
+  @media screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
+//wi-m
+@mixin tablet-s {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+
+@mixin mobile-xl {
+  @media screen and (max-width: 584px) {
+    @content;
+  }
+}
+
+//wi-ml
+@mixin mobile-l {
+  @media screen and (max-width: 424px) {
+    @content;
+  }
+}
+
+//wi-mm
+@mixin mobile-m {
+  @media screen and (max-width: 374px) {
+    @content;
+  }
+}
+
+//wi-s
+@mixin mobile {
+  @media screen and (max-width: 319px) {
+    @content;
+  }
+}
+
+
+
+/*****************************  COLORS  - start ************************/
+
+$placeholder-color: #b4b4b4;
+
+/*****************************  COLORS  - end ************************/
+
+/*****************************  MISC  - start ************************/
+
+
+
+/*****************************  MISC  - end ************************/
+
+/*****************************  MIXINS  - start ************************/
+
+
+
+/*****************************  MIXINS  - end ************************/
+
+
