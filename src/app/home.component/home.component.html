@@ -1,1 +1,5 @@
-home
+<div class="wrapper wi-100 flex-row wrapped">
+  <div *ngFor="let card of products|filter:searchTerm" class="card-wrapper wi-33 wi-xl-33 wi-l-50 wi-m-100">
+    <app-card [value]="card"></app-card>
+  </div>
+</div>

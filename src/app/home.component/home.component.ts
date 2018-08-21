@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {ProductsService} from '../app.service';
+import {Product} from '../app.model';
 
 
 
@@ -12,14 +14,32 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HomeComponent implements OnInit{
 
-  constructor(){
+  products:Product[];
+  searchTerm:string='';
+
+  constructor(private productService:ProductsService){
 
   }
 
 	ngOnInit(){
+    this.productService.getAllProducts()
+      .subscribe(
+        (value)=>{
+          if(value){
+            this.products=value;
+            this.getSearchTerm();
+          }
+        }
+      )
 
   }
 
+  getSearchTerm(){
+    this.productService.getsearchTerm()
+      .subscribe(
+        value => this.searchTerm=value
+      )
+  }
 
 
 

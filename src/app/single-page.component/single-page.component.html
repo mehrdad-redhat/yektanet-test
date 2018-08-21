@@ -1,0 +1,27 @@
+<section>
+  <img [src]="product?.image" alt="no-image">
+  <main>
+    <h1><b>{{product?.title}}</b></h1>
+    <a [attr.href]="product?.link">Web Page Link</a>
+    <p>{{product?.description}}</p>
+
+    <ul>
+      <li *ngFor="let tag of product?.tags;let i=index" [class.pop]="tagsState[i]" (click)="editStateChange(popup,$event,i)">
+        <div class="popup">
+          <div class="input-container">
+            <label for="key">نام :</label>
+            <input type="text" id="key" [(ngModel)]="tag.key">
+          </div>
+          <div class="input-container">
+            <label for="value">مقدار :</label>
+            <input maxlength="8" sbOnlyNumbersandAlphabetAllowed type="text" id="value" [(ngModel)]="tag.value">
+          </div>
+          <button type="submit" (click)="submitChange()"  #popup>اعمال تغییر</button>
+        </div>
+        <span>{{tag.key}} : {{tag.value}}</span>
+      </li>
+    </ul>
+  </main>
+</section>
+
+

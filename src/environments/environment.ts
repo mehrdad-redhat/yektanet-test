@@ -9,7 +9,7 @@
 export const environment = {
   production: false,
   mode:'staging',
-  serverUrl:'https://customer-stage.snapp-box.com/v1/'
+  serverUrl:'http://localhost:3000/'
 };
 
 /*

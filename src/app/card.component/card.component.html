@@ -1,0 +1,17 @@
+<section>
+  <img [src]="value?.image" alt="no-image">
+  <main>
+    <span><b>{{value?.title}}</b></span>
+    <a [attr.href]="value?.link">Web Page Link</a>
+    <div class="paragraph">
+      <div></div>
+      <p>{{value?.description}}</p>
+    </div>
+    <ul>
+      <li *ngFor="let tag of value?.tags">
+        <span>{{tag.key}} : {{tag.value}}</span>
+      </li>
+    </ul>
+  </main>
+  <a [routerLink]="[value?._id]">More</a>
+</section>

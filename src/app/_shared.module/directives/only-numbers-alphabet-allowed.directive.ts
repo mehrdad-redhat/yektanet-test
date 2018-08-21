@@ -1,9 +1,9 @@
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
-  selector: '[sbOnlyNumbersAllowed]'
+  selector: '[sbOnlyNumbersandAlphabetAllowed]'
 })
-export class OnlyNumbersAllowedDirective {
+export class OnlyNumbersAlphabetAllowedDirective {
 
   constructor(private element: ElementRef) {
   }
@@ -14,7 +14,7 @@ export class OnlyNumbersAllowedDirective {
       if(this.active){
         let charCode = $event.which || $event.keyCode || $event.charCode;
         if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-          return /^[0-9۰۱۲۳۴۵۶۷۸۹]$/.test($event.key);
+          return /[a-zA-Z0-9]/.test($event.key);
         }
         else
           return true;
